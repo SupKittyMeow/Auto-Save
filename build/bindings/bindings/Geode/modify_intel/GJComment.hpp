@@ -1,0 +1,30 @@
+#pragma once
+#include <Geode/modify/Modify.hpp>
+#include <Geode/modify/Field.hpp>
+#include <Geode/binding/GJComment.hpp>
+using namespace geode::modifier;
+namespace geode::modifier {
+    
+	#ifndef GEODE_STATICS_create
+		#define GEODE_STATICS_create
+		GEODE_AS_STATIC_FUNCTION(create) 
+	#endif
+
+	#ifndef GEODE_STATICS_init
+		#define GEODE_STATICS_init
+		GEODE_AS_STATIC_FUNCTION(init) 
+	#endif
+
+
+	template<class Der>
+	struct ModifyDerive<Der, GJComment> : ModifyBase<ModifyDerive<Der, GJComment>> {
+        using BaseModify = ModifyBase<ModifyDerive<Der, GJComment>>;
+		using ModifyBase<ModifyDerive<Der, GJComment>>::ModifyBase;
+		using Base = GJComment;
+        using Derived = Der;
+		void apply() override {
+
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x568dc0, Default, GJComment, init, )
+		}
+	};
+}

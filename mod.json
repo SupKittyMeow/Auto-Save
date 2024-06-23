@@ -1,0 +1,27 @@
+{
+    "geode": "3.0.0",
+    "gd": {
+        "android": "2.206",
+        "win": "2.206",
+        "mac": "2.206"
+    },
+    "version": "v1.0.0",
+    "id": "supkittymeow.auto_save",
+    "name": "Auto Save",
+    "developer": "supkittymeow",
+    "description": "Auto save for level completions and editor",
+    
+    "dependencies": [
+        {
+            "id": "geode.node-ids",
+            "version": ">=v1.12.0",
+            "importance": "required"
+        }
+    ],
+    "tags": [
+        "editor",
+        "universal",
+		"utility",
+		"enhancement"
+    ]
+}
